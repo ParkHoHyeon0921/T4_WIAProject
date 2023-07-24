@@ -42,7 +42,7 @@ class ChatClient:
         """해당 클라이언트에게 메시지 전달하기 위한 기능"""
         if type(msg) == bytes:
             msg = msg
-
+        print(msg, "SerVerSocket파일에서 받은 메시지입니다.")
         self.client_socket.sendall(msg.encode('utf-8'))
 
     def run(self):
