@@ -1,6 +1,8 @@
+import pickle
+
 from PyQt5.QtCore import pyqtSlot
 
-from ClientSocket import ClientSocket
+from Client.ClientSocket import ClientSocket
 
 class LoginFunction:
     def __init__(self):
@@ -18,11 +20,14 @@ class LoginFunction:
         """
         self.Controller.send_to_server(header, msg)
 
-    @pyqtSlot(str)
+    @pyqtSlot(list)
     def _recv_from_server(self, recv_):
         """
         :param recv_: 서버에게 받은 값을 리스트형태로 받음
         """
+        recv_data = pickle.load(recv_)
+
+
 
 
 

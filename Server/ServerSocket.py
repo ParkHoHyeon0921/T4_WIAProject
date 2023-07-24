@@ -3,6 +3,8 @@ import threading, socket
 import time
 import pickle
 
+from Server.DBClass import DBClass
+
 
 class Room: #채팅방
     """클라이언트들에게 메시지를 전부 보내기위한 기능"""
@@ -19,7 +21,7 @@ class Room: #채팅방
     def sendAllClients(self, msg):
         """클라이언트 전부에게 메세지 전달 기능"""
         for cos in self.clients:
-            cos.sendMsg(msg)
+            cos.send_to_client(msg)
 
 class ChatClient:
     """클라이언트 send값을 recv하는 클래스"""
@@ -28,21 +30,35 @@ class ChatClient:
         self.room = room
         self.num = num
 
-    def recvMsg(self):
+    def recv_from_client(self):
         """클라이언트들의 메시지를 받는 기능"""
         while True:
             data_and_buffer = self.client_socket.recv(1024)  # msg + buffer형태
-            data = data_and_buffer.strip()  # buffer을 제거
-            if data == 'stop':
-                print(self.num, "번 클라이언트 접속해제")
-                break
+            data_all = data_and_buffer.strip()  # buffer을 제거
+            data_list = data_all.split(':')
+            print(data_list, "ServerSocket파일에서 받은 메시지입니다.")
+            command = data_list[0]
+            msg_list = data_list[-1]
+            if command == 'Server':
+                if msg_list[0] == 'Socket':
+                    if msg_list[1] == 'Stop':
+                        print(self.num, "번 클라이언트 접속해제")
+                        break
+                elif msg_list[0] == 'DB':
+                    if msg_list[1] == 'Login':
+                        print(msg_list[2])
+                        db_data = DBClass(msg_list[2])
+                        list_to_db = db_data.tolist()
+                        self.send_to_client(list_to_db)
+                    elif msg_list[1] == 'Pw_Change':
+                        print(msg_list[2], msg_list[3])
         self.room.deleteClient(self)
 
-    def sendMsg(self, msg):
+    def send_to_client(self, msg):
         """해당 클라이언트에게 메시지 전달하기 위한 기능"""
         if type(msg) == bytes:
             msg = msg
-        print(msg, "SerVerSocket파일에서 받은 메시지입니다.")
+        print(msg, "SerVerSocket파일에서 보낼 메시지입니다.")
         self.client_socket.sendall(msg.encode('utf-8'))
 
     def run(self):

@@ -1,5 +1,3 @@
-
-
 from socket import *
 
 import threading
@@ -9,7 +7,7 @@ from PyQt5.QtCore import QObject, pyqtSignal
 
 
 class ClientSocket(QObject):
-    db_signal = pyqtSignal(str)
+    db_signal = pyqtSignal(list)
     def __init__(self):
         super().__init__()
         self.buffer = 50000
@@ -34,7 +32,6 @@ class ClientSocket(QObject):
         """서버에게 받은 recv값"""
         while True:
             msg = self.connectsocket.recv(1024)
-            msg.decode(self.decode_lange)
             self.db_signal.emit(msg)
 
     def thread_Func(self):
