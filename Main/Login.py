@@ -1,19 +1,17 @@
 import pickle
 import sys
 
-from PyQt5.QtCore import pyqtSlot
 from PyQt5.Qt import *
 from PyQt5.QtWidgets import QWidget, QApplication
 from PyQt5.uic import loadUi
 
-from Client.ClientSocket import ClientSocket
-from ChatRoom import ChatRoom
-
-class LoginFunction(QWidget):
-    def __init__(self):
+class LoginFunction(QDialog):
+    def __init__(self, soc):
         super().__init__()
         loadUi('../UI/Login.ui', self)
+        self.controller = soc
         self._default_set()
+        self.data_ = None
 
     @pyqtSlot(list)
     def recv_from_Control(self, recv_list):
@@ -30,8 +28,10 @@ class LoginFunction(QWidget):
             self.lineEdit.setFocus()
         else:
             if self.lineEdit_2.text() == data_[1]:
-                room_num = "2" #임의로 지정
-                self.chatroom = ChatRoom(data_[2], room_num, self.controller)
+                print('로그인 성공')
+                self.data_ = data_
+                self.close()
+                return self.data_
             else:
                 self.label_4.setText("비밀번호가 일치하지 않습니다.")
                 self.lineEdit_2.clear()
@@ -57,8 +57,6 @@ class LoginFunction(QWidget):
             self.label_5.setText("이메일을 입력하지 않았습니다.")
             self.lineEdit.setFocus()
 
-
-
     def _default_set(self):
         """윈도우 초기 설정값"""
         self._controller_connect_Function()
@@ -68,8 +66,6 @@ class LoginFunction(QWidget):
 
     def _controller_connect_Function(self):
         """컨트롤러와 이어주는 기능"""
-        self.controller = ClientSocket()
-        self.controller.clientsocket_Set()
         self.controller.db_signal.connect(self.recv_from_Control)
 
     def _btn_connect(self):
@@ -87,11 +83,6 @@ class LoginFunction(QWidget):
         for i in self.lineEdit.text():
             if i in text_list:
                 self.lineEdit.setText(self.lineEdit.text()[:-1])
-    def closeEvent(self, e):
-        """로그인 종료시 소켓 닫히게 설정."""
-        self.controller_to_send("Server", f"None:None:Socket/Stop")
-        self.controller.client_socket.close()
-
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)

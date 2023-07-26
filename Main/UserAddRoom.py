@@ -1,3 +1,5 @@
+import datetime
+
 from PyQt5.QtGui import QPixmap
 from PyQt5.QtWidgets import QWidget, QLabel
 from PyQt5.uic import loadUi
@@ -16,4 +18,4 @@ class UserAddRoom(QWidget):
         self.label.setText(self.name)
         # self.label_3.setPixmap(QPixmap(self.img))
         self.textEdit.setText(self.msg)
-        # self.label_2.setText(self.time)
+        self.label_2.setText(f'{datetime.datetime.now().hour}:{datetime.datetime.now().minute}')

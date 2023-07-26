@@ -22,14 +22,16 @@ class DBFile:
         """
         df = pd.read_sql(f"SELECT *  FROM USERS WHERE USER_EMAIL = '{email}'", self.engine)
         # df = pd.read_sql(f"SELECT *  FROM USERS", self.engine)
+        print(df.head())
         return df.values
 
 
     # def insert_data_Function(self, id, pw_, name):
-    #     self.cur.execute("INSERT INTO user_info VALUES (?, ?, ?, ?, ?, ?, ?)", (id, pw_, name))
-    #     self.con.commit()
-
+    #     cursor = self.pgdb.cursor()
+    #     cursor.execute(f"INSERT INTO USERS (USER_EMAIL, USER_PW, USER_NM) VALUES ('{id}', '{pw_}', '{name}')")
+    # #     # self.pgdb.commit()
 
 if __name__ == '__main__':
     DB_file = DBFile()
     print(DB_file.join_user('ghgusghgus2085@gmail.com'))
+    # DB_file.insert_data_Function('HI', '1234', "박호현")

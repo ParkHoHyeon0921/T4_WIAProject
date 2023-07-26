@@ -12,7 +12,6 @@ class ClientSocket(QObject):
     def __init__(self):
         super().__init__()
 
-
     def clientsocket_Set(self):
         """클라이언트 소켓 연결"""
         self.client_socket = socket(AF_INET, SOCK_STREAM)
