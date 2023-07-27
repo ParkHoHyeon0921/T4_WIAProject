@@ -65,7 +65,7 @@ padding:5px;</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>../IMG/exit.png</pixmap>
+          <pixmap>../../../../../../../../.designer/IMG/exit.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -281,7 +281,7 @@ padding:5px;</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>../IMG/home.png</pixmap>
+          <pixmap>../../../../../../../../.designer/IMG/home.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -393,7 +393,7 @@ padding:5px;</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>../IMG/TALK.png</pixmap>
+          <pixmap>../../../../../../../../.designer/IMG/TALK.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -481,7 +481,7 @@ padding:5px;</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>../IMG/alarm.png</pixmap>
+          <pixmap>../../../../../../../../.designer/IMG/alarm.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -569,7 +569,7 @@ padding:5px;</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>../IMG/gear.png</pixmap>
+          <pixmap>../../../../../../../../.designer/IMG/gear.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -759,7 +759,7 @@ padding:5px;</string>
          <string/>
         </property>
         <property name="pixmap">
-         <pixmap>../IMG/click.png</pixmap>
+         <pixmap>../../../../../../../../.designer/IMG/click.png</pixmap>
         </property>
         <property name="scaledContents">
          <bool>true</bool>
@@ -1072,7 +1072,7 @@ padding:5px;</string>
               <string/>
              </property>
              <property name="pixmap">
-              <pixmap>../IMG/profile/captain_female.png</pixmap>
+              <pixmap>../../../../../../../../.designer/IMG/profile/captain_female.png</pixmap>
              </property>
              <property name="scaledContents">
               <bool>true</bool>
@@ -1239,7 +1239,7 @@ padding:5px;</string>
               <string/>
              </property>
              <property name="pixmap">
-              <pixmap>../IMG/profile/2.png</pixmap>
+              <pixmap>../../../../../../../../.designer/IMG/profile/2.png</pixmap>
              </property>
              <property name="scaledContents">
               <bool>true</bool>
@@ -1406,7 +1406,7 @@ padding:5px;</string>
               <string/>
              </property>
              <property name="pixmap">
-              <pixmap>../IMG/profile/19.png</pixmap>
+              <pixmap>../../../../../../../../.designer/IMG/profile/19.png</pixmap>
              </property>
              <property name="scaledContents">
               <bool>true</bool>
@@ -1573,7 +1573,7 @@ padding:5px;</string>
               <string/>
              </property>
              <property name="pixmap">
-              <pixmap>../IMG/profile/18.png</pixmap>
+              <pixmap>../../../../../../../../.designer/IMG/profile/18.png</pixmap>
              </property>
              <property name="scaledContents">
               <bool>true</bool>
@@ -1775,7 +1775,7 @@ background-color: rgb(79, 255, 217);</string>
             <string/>
            </property>
            <property name="pixmap">
-            <pixmap>../IMG/python.png</pixmap>
+            <pixmap>../../../../../../../../.designer/IMG/python.png</pixmap>
            </property>
            <property name="scaledContents">
             <bool>true</bool>
@@ -1822,7 +1822,7 @@ background-color: rgb(79, 255, 217);</string>
             <string/>
            </property>
            <property name="pixmap">
-            <pixmap>../IMG/database.png</pixmap>
+            <pixmap>../../../../../../../../.designer/IMG/database.png</pixmap>
            </property>
            <property name="scaledContents">
             <bool>true</bool>
@@ -1869,7 +1869,7 @@ background-color: rgb(79, 255, 217);</string>
             <string/>
            </property>
            <property name="pixmap">
-            <pixmap>../IMG/c-sharp.png</pixmap>
+            <pixmap>../../../../../../../../.designer/IMG/c-sharp.png</pixmap>
            </property>
            <property name="scaledContents">
             <bool>true</bool>
@@ -1916,7 +1916,7 @@ background-color: rgb(79, 255, 217);</string>
             <string/>
            </property>
            <property name="pixmap">
-            <pixmap>../IMG/html-5.png</pixmap>
+            <pixmap>../../../../../../../../.designer/IMG/html-5.png</pixmap>
            </property>
            <property name="scaledContents">
             <bool>true</bool>
@@ -2032,7 +2032,7 @@ background-color:rgb(255, 46, 112);</string>
            <string/>
           </property>
           <property name="pixmap">
-           <pixmap>../IMG/calendar.png</pixmap>
+           <pixmap>../../../../../../../../.designer/IMG/calendar.png</pixmap>
           </property>
           <property name="scaledContents">
            <bool>true</bool>
@@ -2446,7 +2446,7 @@ background-color:white;</string>
                <string/>
               </property>
               <property name="pixmap">
-               <pixmap>../IMG/user (2).png</pixmap>
+               <pixmap>../../../../../../../../.designer/IMG/user (2).png</pixmap>
               </property>
               <property name="scaledContents">
                <bool>true</bool>
@@ -2490,7 +2490,7 @@ background-color:white;</string>
                <string/>
               </property>
               <property name="pixmap">
-               <pixmap>../IMG/multiple-users-silhouette.png</pixmap>
+               <pixmap>../../../../../../../../.designer/IMG/multiple-users-silhouette.png</pixmap>
               </property>
               <property name="scaledContents">
                <bool>true</bool>
@@ -2601,7 +2601,7 @@ background-color:white;</string>
            </property>
            <property name="icon">
             <iconset>
-             <normaloff>../../../.designer/IMG/paper-plane.png</normaloff>../../../.designer/IMG/paper-plane.png</iconset>
+             <normaloff>../../../../../../../../../.designer/IMG/paper-plane.png</normaloff>../../../../../../../../../.designer/IMG/paper-plane.png</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -2633,20 +2633,39 @@ background-color:white;</string>
         <property name="spacing">
          <number>0</number>
         </property>
+        <item>
+         <widget class="QScrollArea" name="scrollArea">
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents_3">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>1105</width>
+             <height>400</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_7">
+            <item>
+             <spacer name="verticalSpacer_3">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>379</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
        </layout>
-      </item>
-      <item>
-       <spacer name="verticalSpacer_3">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>1088</width>
-          <height>268</height>
-         </size>
-        </property>
-       </spacer>
       </item>
       <item>
        <widget class="QGroupBox" name="groupBox_4">

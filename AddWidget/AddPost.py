@@ -14,7 +14,7 @@ class AddPostABC(QWidget):
         self.label_7.setText(answer_cnt)  # 답변 갯수
         self.label_8.setText(view_cnt)  #  조회수
         self.label_9.setText(title_)  # 제목
-        self.label_10.setText(comment_)  # 내용
+        self.label_10.setText(comment_[0])  # 내용
         self.tag = None # list for tag add widget
         self.label_11.setText(user_name)  # 유저이름
         self.post_info = {"answer":answer_cnt, "view":view_cnt, "title":title_, "comment":comment_, 'name':user_name, 'tag_list':tag}

@@ -24,11 +24,13 @@ class ChatRoom(QWidget):
         dummy_chat.setParent(self.scrollAreaWidgetContents)
         self.scrollArea.widget().layout().addWidget(dummy_chat)
     def btn_clicked_controller(self):
+        """버튼 클릭 연결 컨트롤러"""
         self.pushButton.clicked.connect(self.enter_to_lineEdit)
         self.pushButton_2.clicked.connect(self.close)
         self.lineEdit.returnPressed.connect(self.enter_to_lineEdit)
 
     def enter_to_lineEdit(self):
+        """엔터입력시 라인에딧 텍스트를 서버에게 전달합니다."""
         if self.lineEdit.text() == '':
             pass
         else:
